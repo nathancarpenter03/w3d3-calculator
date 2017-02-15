@@ -1,0 +1,10 @@
+.calc-body {
+    border: black solid 1px;
+    background: grey;
+}
+
+.inputbox, textarea {
+  background-color : lightskyblue;
+}
+
+
