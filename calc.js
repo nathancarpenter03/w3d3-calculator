@@ -1,3 +1,6 @@
+// Variable Declarations
+var avow = require('avow');
+
 var answer = 0;
 
 // Function Definitions
@@ -35,12 +38,21 @@ function decrement () {
 }
 
 // Event Handlers
-document.querySelector('#calc').addEventListener('click', function(e) {
-    var calcFunction = e.target.id,
-        number1 = Number(document.querySelector('#number1').value),
-        number2 = Number(document.querySelector('#number2').value);
+// document.querySelector('#calc').addEventListener('click', function(e) {
+//     var calcFunction = e.target.id,
+//         number1 = Number(document.querySelector('#number1').value),
+//         number2 = Number(document.querySelector('#number2').value);
 
-    answer+= window[calcFunction](number1, number2);
+//     answer+= window[calcFunction](number1, number2);
 
-    document.querySelector('#answer').innerHTML = answer;
-});
+//     document.querySelector('#answer').innerHTML = answer;
+// });
+
+avow('add(2,2) should equal 4', 4 === add(2,2), '2', add(2,2));
+avow('subtract(2,2) should equal 0', 0 === subtract(2,2), '0', subtract(2,2));
+avow('multiply(2,2) should equal 4', 4 === multiply(2,2), '4', multiply(2,2));
+avow('divide(2,2) should equal 1', 1 === subtract(2,2), '1', divide(2,2));
+avow('increment() should equal 1', 1 === increment(), '1', increment());
+avow('decrement() should equal -1', -1 === decrement(), '-1', decrement());
+
+
